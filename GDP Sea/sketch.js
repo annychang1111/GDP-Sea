@@ -1,18 +1,14 @@
 var allData;
-var allDataC;
 var usGDP;
-var caGDP;
 
 function preload() {
   allData = loadJSON("http://api.worldbank.org/v2/countries/us/indicators/NY.GDP.MKTP.CD?format=json");
-  allDataC = loadJSON("http://api.worldbank.org/v2/countries/ca/indicators/NY.GDP.MKTP.CD?format=json");
 }
 
 function setup() {
   createCanvas(1350, 700);
   frameRate(10);
   usGDP = allData[1];
-  caGDP = allDataC[1];
   // console.log(usGDP[1].value);
   // console.log(loadJSON("http://api.worldbank.org/v2/countries/ca/indicators/NY.GDP.MKTP.CD?format=json"));
 }
